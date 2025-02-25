@@ -14,11 +14,12 @@ public abstract class Item {
 		this.title = title;
 	}
 
-	public abstract void print() ;
-
+	public void print() {
+        System.out.println(this);
+    }
 	@Override
 	public String toString() {
 		return "title=" + title ;
 	}
-	
+	public abstract void accept(ItemVisitor visitor);
 }
